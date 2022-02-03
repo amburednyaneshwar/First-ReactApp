@@ -47,7 +47,7 @@ const Weather=()=>{
  <input type="submit" value="Submit"></input>
  </form>
 <div className='data'>
-<p>Temperature: {Math.round(weather-273.15)} ℃/ {Math.ceil(weather-273.15)*1.8 + 32} ℉</p>
+<p>Temperature: {Math.round(weather-273.15)} ℃/ {Math.trunc(weather-273.15)*1.8 + 32} ℉</p>
 <p>City: {city}({country})</p>
 <p>Humidity: {humidity} %</p>
 <p>Wind: {wind} mph</p>

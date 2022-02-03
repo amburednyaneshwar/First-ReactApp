@@ -1,13 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+ Routes,
+  Route,
+  Link
+} from "react-router-dom";
+ 
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Test from './Test';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+  <BrowserRouter>
+        <div>
+          <ul>
+            <li>
+              <Link to="/">App</Link>
+            </li>
+            <li>
+              <Link to="/Test">Test</Link>
+            </li>
+            
+          </ul>
+  
+          <Routes>
+            
+            <Route path="Test" element={<Test />} />
+
+            <Route path="" element={<App />} />
+           
+            
+          </Routes>
+        </div>
+      </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 
