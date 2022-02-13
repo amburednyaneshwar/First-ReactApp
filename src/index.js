@@ -1,41 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter,
- Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//  Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
  
 import './index.css';
+// import Todo from './Todo';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Test from './Test';
+// import Test from './Test';
 
 ReactDOM.render(
-
-  <BrowserRouter>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">App</Link>
-            </li>
-            <li>
-              <Link to="/Test">Test</Link>
-            </li>
+<App />
+  // <BrowserRouter>
+  //       <div>
+  //         <ul>
+  //           <li>
+  //             <Link to="/">App</Link>
+  //           </li>
+  //           <li>
+  //             <Link to="/Test">Test</Link>
+  //           </li>
             
-          </ul>
+  //         </ul>
   
-          <Routes>
+  //         <Routes>
             
-            <Route path="Test" element={<Test />} />
+  //           <Route path="Test" element={<Test />} />
 
-            <Route path="" element={<App />} />
+  //           <Route path="" element={<App />} />
            
             
-          </Routes>
-        </div>
-      </BrowserRouter>
+  //         </Routes>
+  //       </div>
+  //     </BrowserRouter>
   ,
   document.getElementById('root')
 );
